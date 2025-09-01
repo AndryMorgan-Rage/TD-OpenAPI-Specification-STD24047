@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: Ping API
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /ping:
+    get:
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                example: pong
+                type: string
+          description: Retourne pong
+      summary: Vérifie la disponibilité du service
+      x-accepts:
+      - text/plain
+components:
+  schemas: {}
+
